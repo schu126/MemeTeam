@@ -12,4 +12,5 @@ function MemeCard() {
   );
 }
 
+// MemeCard;
 export default MemeCard;
