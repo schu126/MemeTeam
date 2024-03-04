@@ -4,7 +4,7 @@
         "id": 1,
         "title": "",
         "category": "celebrity",
-        "image": "https://imgflip.com/i/8hxz4r",
+        "image": "https://i.imgflip.com/8hxz4r.jpg",
         "tags": ["Drake", "code", "software"],
         "liked": true
       },
@@ -12,7 +12,7 @@
         "id": 2,
         "title": "",
         "category": "sponge bob",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vox.com%2Fculture%2F2019%2F5%2F1%2F18525337%2Fspongebob-memes-mocking-caveman-history&psig=AOvVaw1vwosQY2bnta9AXTjUyHc2&ust=1709657632167000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOCItZGJ24QDFQAAAAAdAAAAABAR",
+        "image": "https://cdn.vox-cdn.com/thumbor/qE278ftykws42-PbFGJ7ktZ1pZc=/0x0:1920x1080/1820x1213/filters:focal(807x387:1113x693):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63718716/spongebob_characters_wallpaper_thumb_1920_637740.0.jpg",
         "tags": ["how I feel", "happy", "sad"],
         "liked": false
       },
@@ -20,7 +20,7 @@
         "id": 3,
         "title": "",
         "category": "classics",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iflscience.com%2Fscientists-discover-the-most-popular-memes-on-the-internet-finally-48146&psig=AOvVaw3jF7J7-mi9-D1Vftj3i6pw&ust=1709657552026000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPje3uuI24QDFQAAAAAdAAAAABAE",
+        "image": "https://assets.iflscience.com/assets/articleNo/48146/aImg/24654/1528363108-cover-image-l.webp",
         "tags": ["looking back", "other girl", "boyfriend"],
         "liked": false
       },
@@ -28,7 +28,7 @@
         "id": 4,
         "title": "",
         "category": "animals",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.boredpanda.com%2Fcat-memes-catslovecatnip%2F&psig=AOvVaw3Hg_SAkE1tTZbAYdERlTa6&ust=1709657707177000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJCIrLyJ24QDFQAAAAAdAAAAABAE",
+        "image": "https://www.boredpanda.com/blog/wp-content/uploads/2022/09/cat-memes-catslovecatnip-4-632c6f9a85e8c__700.jpg",
         "tags": ["cat", "argument", "fight"],
         "liked": false
       },
@@ -36,7 +36,7 @@
         "id": 5,
         "title": "",
         "category": "fail",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbullion.directory%2Fmeme-investors-speechless-as-usual-tricks-fail-spectacularly%2F&psig=AOvVaw11LwYUnIRZw08l0zzVmW_B&ust=1709657773433000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKCx9t-J24QDFQAAAAAdAAAAABAE",
+        "image": "https://i.chzbgr.com/full/9052700416/h01180F1C/funny-meme-about-life-with-pics-of-embarrassed-monkey-who-had-made-a-typo",
         "tags": [],
         "liked": false
       },
@@ -44,7 +44,7 @@
         "id": 6,
         "title": "",
         "category": "misc",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fimgflip.com%2Fmemetemplate%2F385730355%2FPov&psig=AOvVaw1xuj4Ri_YqJRNAONamwrTJ&ust=1709658015796000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNiMzMeK24QDFQAAAAAdAAAAABAE",
+        "image": "https://i.imgflip.com/6dnjg3.jpg",
         "tags": [],
         "liked": false
       }
