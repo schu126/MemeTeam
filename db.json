@@ -1,0 +1,54 @@
+{
+    "memes": [
+      {
+        "id": 1,
+        "title": "",
+        "category": "celebrity",
+        "image": "https://imgflip.com/i/8hxz4r",
+        "tags": ["Drake", "code", "software"],
+        "liked": true
+      },
+      {
+        "id": 2,
+        "title": "",
+        "category": "sponge bob",
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vox.com%2Fculture%2F2019%2F5%2F1%2F18525337%2Fspongebob-memes-mocking-caveman-history&psig=AOvVaw1vwosQY2bnta9AXTjUyHc2&ust=1709657632167000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOCItZGJ24QDFQAAAAAdAAAAABAR",
+        "tags": ["how I feel", "happy", "sad"],
+        "liked": false
+      },
+      {
+        "id": 3,
+        "title": "",
+        "category": "classics",
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iflscience.com%2Fscientists-discover-the-most-popular-memes-on-the-internet-finally-48146&psig=AOvVaw3jF7J7-mi9-D1Vftj3i6pw&ust=1709657552026000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPje3uuI24QDFQAAAAAdAAAAABAE",
+        "tags": ["looking back", "other girl", "boyfriend"],
+        "liked": false
+      },
+      {
+        "id": 4,
+        "title": "",
+        "category": "animals",
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.boredpanda.com%2Fcat-memes-catslovecatnip%2F&psig=AOvVaw3Hg_SAkE1tTZbAYdERlTa6&ust=1709657707177000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJCIrLyJ24QDFQAAAAAdAAAAABAE",
+        "tags": ["cat", "argument", "fight"],
+        "liked": false
+      },
+      {
+        "id": 5,
+        "title": "",
+        "category": "fail",
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbullion.directory%2Fmeme-investors-speechless-as-usual-tricks-fail-spectacularly%2F&psig=AOvVaw11LwYUnIRZw08l0zzVmW_B&ust=1709657773433000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKCx9t-J24QDFQAAAAAdAAAAABAE",
+        "tags": [],
+        "liked": false
+      },
+      {
+        "id": 6,
+        "title": "",
+        "category": "misc",
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fimgflip.com%2Fmemetemplate%2F385730355%2FPov&psig=AOvVaw1xuj4Ri_YqJRNAONamwrTJ&ust=1709658015796000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNiMzMeK24QDFQAAAAAdAAAAABAE",
+        "tags": [],
+        "liked": false
+      }
+    ]
+  }
+  
+
