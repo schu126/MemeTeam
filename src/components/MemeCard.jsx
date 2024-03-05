@@ -1,9 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function MemeCard() {
-  let { id } = useParams();
-
+ 
   return (
     <div>
       <h2>Meme Details</h2>
