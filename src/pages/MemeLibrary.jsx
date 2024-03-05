@@ -19,22 +19,29 @@ function MemeLibrary() {
                 console.log("Fetched memes:", data);
                 setMemes(data);
             })
-           
+
     }, []);
+    
+    const memesList = memes.map(meme => (
+        meme.image && (
+            <Link key={meme.id} to={`/memes/${meme.id}`}>
+                <MemeCard meme={meme} />
+            </Link>
+        )
+    ));
 
     return (
-        
-    
-        <div className="memesLibrary">
-             <NavBar />
-            {memes.map(meme => (
-                meme.image && (
-                    <Link key={meme.id} to={`/memes/${meme.id}`}>
-                        <MemeCard meme={meme} />
-                    </Link>
-                )
-            ))}
-        </div>
+        <>
+            <div className="memesLibrary">
+                <header>
+                    <NavBar />
+                </header>
+                <main>
+                    {error && <p>Error: {error}</p>}
+                    {memesList}
+                </main>
+            </div>
+        </>
     );
 }
 
