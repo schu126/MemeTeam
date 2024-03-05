@@ -15,14 +15,10 @@ function LikedMemes() {
             })
             .then(data => {
                 console.log("Fetched memes:", data);
-                // Filter the memes to get only liked ones
+                
                 const likedMemes = data.filter(meme => meme.liked === true);
                 setLikedMemes(likedMemes);
             })
-            .catch(error => {
-                setError(error);
-                console.error('Error fetching memes:', error);
-            });
     }, []);
 
     return (
