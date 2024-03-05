@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import MemeCard from '../components/MemeCard';
+import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
@@ -17,21 +19,19 @@ function MemeLibrary() {
                 console.log("Fetched memes:", data);
                 setMemes(data);
             })
-            .catch(error => {
-                console.error('Error fetching memes:', error);
-                setError(error);
-            });
+           
     }, []);
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
-
     return (
+        
+    
         <div className="memesLibrary">
+             <NavBar />
             {memes.map(meme => (
                 meme.image && (
-                    <img key={meme.id} src={meme.image} alt={meme.title || 'Meme'} />
+                    <Link key={meme.id} to={`/memes/${meme.id}`}>
+                        <MemeCard meme={meme} />
+                    </Link>
                 )
             ))}
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import LikedMemes from "./pages/LikedMemes";
 import NewMemeForm from "./pages/NewMemeForm";
-import MemeLibrary from "./components/MemeLibrary";
+import MemeLibrary from "./pages/MemeLibrary";
 import ErrorPage from "./pages/ErrorPage";
 // import NavBar from "./components/NavBar";
 
@@ -26,7 +26,12 @@ const routes = [
     path: "/library",
     element: <MemeLibrary />,
     errorElement: <ErrorPage />
-  }
+  },
+  // {
+  //   path: "/meme",
+  //   element: <MemeCard />,
+  //   errorElement: <ErrorPage />
+  // },
 ];
 
 export default routes;

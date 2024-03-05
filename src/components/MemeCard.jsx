@@ -1,12 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function MemeCard() {
- 
+function MemeCard({ meme }) {
   return (
     <div>
-      <h2>Meme Details</h2>
-      <p>Display details for meme with ID: {id}</p>
+       {/* <NavBar /> */}
+      {/* <h2>add like button & edit option to update tags</h2> */}
+      <h2>[*]]</h2>
+      <Link to={`/memes/${meme.id}`}>
+        <img src={meme.image} alt={meme.title || 'Meme'} />
+      </Link>
     </div>
   );
 }
