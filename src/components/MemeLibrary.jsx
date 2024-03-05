@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
 
@@ -13,9 +12,12 @@ function MemeLibrary() {
                 return response.json();
             })
             .then(data => {
+                console.log("Fetched memes:", data); // Add console log to check fetched data
                 setMemes(data);
-            })
+            });
     }, []);
+
+    console.log("Memes state:", memes); // Add console log to check memes state
 
     return (
         <div className="memesLibrary">

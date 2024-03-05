@@ -1,23 +1,60 @@
+// import Home from "./pages/Home";
+// import LikedMemes from "./pages/LikedMemes";
+// import NewMemeForm from "./pages/NewMemeForm";
+// import MemeLibrary from "./components/MemeLibrary";
+// import ErrorPage from "./pages/ErrorPage";
+
+// const routes = [
+//   {
+//     path: "/",
+//     element: <Home />,
+//     errorElement: <ErrorPage />
+//   },
+//   {
+//     path: "/favorites",
+//     element: <LikedMemes />,
+//     errorElement: <ErrorPage />
+//   },
+//   {
+//     path: "/upload",
+//     element: <NewMemeForm />,
+//     errorElement: <ErrorPage />
+//   },
+//   {
+//     path: "/memes/:id",
+//     element: <MemeLibrary />,
+//     errorElement: <ErrorPage />
+//   }
+// ];
+
+// export default routes;
+
 import Home from "./pages/Home";
-import Favorites from "./pages/LinkedMemes";
-import Upload from "./pages/NewMemeForm";
-import ErrorPage from "./pages/ErrorPage";
+import LikedMemes from "./pages/LikedMemes";
+import NewMemeForm from "./pages/NewMemeForm";
+import MemeLibrary from "./components/MemeLibrary";
+// import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
   {
     path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />
-  }, 
+    element: () => <Home />,
+    // errorElement: () => <ErrorPage />
+  },
   {
     path: "/favorites",
-    element: <Favorites />,
-    errorElement: <ErrorPage />
+    element: () => <LikedMemes />,
+    // errorElement: () => <ErrorPage />
   },
   {
     path: "/upload",
-    element: <Upload />,
-    errorElement: <ErrorPage />
+    element: () => <NewMemeForm />,
+    // errorElement: () => <ErrorPage />
+  },
+  {
+    path: "/memes/:id",
+    element: () => <MemeLibrary />,
+    // errorElement: () => <ErrorPage />
   }
 ];
 
