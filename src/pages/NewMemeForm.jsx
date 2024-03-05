@@ -7,7 +7,8 @@ function NewMemeForm() {
       <header>
         <NavBar />
       </header>
-      <div>NewMemeForm</div>
+      <h1>Upload Form</h1>
+      <div>Upload Meme</div>
     </>
   );
 }

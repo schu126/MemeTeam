@@ -7,7 +7,8 @@ function LikedMemes() {
       <header>
         <NavBar />
       </header>
-      <div>LikedMemes</div>
+      <h1> Liked Memes </h1>
+      <div> ♥️ ♥️ ♥️ ♥️ ♥️ ♥️ ♥️ LikedMemes ♥️ ♥️ ♥️ ♥️ ♥️ ♥️ ♥️</div>
     </>
   );
 };

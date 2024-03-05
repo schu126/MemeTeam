@@ -1,14 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+// import "./index.css";
 
 function NavBar() {
   return (
     <nav className="nav">
-      NavBar
+      {/* NavBar */}
       <div className='links'>
-        <Link to="/">Home</Link>
-        <Link to="/memes">Library</Link>
-        <Link to="/favorites">Favorites</Link>
+
+        <NavLink to="/" className="nav-link">Home</NavLink>
+        <NavLink to="/library" className="nav-link">Library</NavLink>
+        <NavLink to="/favorites" className="nav-link">Favorites</NavLink>
+        <NavLink to="/upload" className="nav-link">Upload</NavLink>
       </div>
     </nav>
   );
