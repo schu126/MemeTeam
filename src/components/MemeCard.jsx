@@ -26,11 +26,11 @@ function MemeCard({ meme, handleLikeClick }) {
     };
 
     const handleAddTags = () => {
-        setEditingTags(true);
+        // Toggle editingTags state when the button is clicked
+        setEditingTags(prevEditingTags => !prevEditingTags);
         setNewTags('');
     };
 
-    // Handle Patch for the Edit feature
     const handleSubmitTags = () => {
         fetch(`http://localhost:3000/memes/${meme.id}`, {
             method: 'PATCH',
@@ -51,29 +51,36 @@ function MemeCard({ meme, handleLikeClick }) {
         });
     };
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubmitTags();
+        }
+    };
+
     return (
-      <div className='MemeCard'>
-          <img src={meme.image} alt={meme.title || 'Meme'} />
-          <div className="button-container">
-              <button onClick={handleAddTags}>📝</button>
-              <button onClick={handleLike}>
-                  {meme.liked ? '❤️ Liked' : '🤍 Like'}
-              </button>
-      </div>
-          {/* && is a conditional rendering in jsx */}
-          {editingTags && (
-              <div className="edit-container">
-                  <input 
-                  type="text" 
-                  placeholder="Add tags separated by a comma" 
-                  value={newTags} 
-                  onChange={e => setNewTags(e.target.value)} 
-                  />
-                  <button onClick={handleSubmitTags}>Save</button>
-              </div>
-          )}
-      </div>
-  );
+        <div className='MemeCard'>
+            <img src={meme.image} alt={meme.title || 'Meme'} />
+            <div className="button-container">
+                <button onClick={handleAddTags}>📝</button>
+                <button onClick={handleLike}>
+                    {meme.liked ? '❤️ Liked' : '🤍 Like'}
+                </button>
+            </div>
+            {/* Conditionally rendering the input field */}
+            {editingTags && (
+                <div className="edit-container">
+                    <input 
+                        type="text" 
+                        placeholder="Add tags separated by a comma" 
+                        value={newTags} 
+                        onChange={e => setNewTags(e.target.value)} 
+                        onKeyPress={handleKeyPress} // Listen for Enter key press
+                    />
+                    <button onClick={handleSubmitTags}>Save</button>
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default MemeCard;

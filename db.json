@@ -6,9 +6,9 @@
       "category": "celebrity",
       "image": "https://i.imgflip.com/8hxz4r.jpg",
       "tags": [
-        "mo"
+        "Sam"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "2",
@@ -28,7 +28,7 @@
       "category": "classics",
       "image": "https://assets.iflscience.com/assets/articleNo/48146/aImg/24654/1528363108-cover-image-l.webp",
       "tags": [
-        "brento"
+        ""
       ],
       "liked": false
     },
@@ -38,11 +38,9 @@
       "category": "animals",
       "image": "https://www.boredpanda.com/blog/wp-content/uploads/2022/09/cat-memes-catslovecatnip-4-632c6f9a85e8c__700.jpg",
       "tags": [
-        "cat",
-        "argument",
-        "fight"
+        "mo"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "5",
@@ -297,12 +295,9 @@
       "category": "misc",
       "image": "https://i.chzbgr.com/full/9857005568/hC9BA891B/someone-starts-arguing-with-about-something-know-lot-about-m-have-seat",
       "tags": [
-        "argue",
-        "have a seat",
-        "know",
-        "simpsons"
+        "The Simpsons"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "26",

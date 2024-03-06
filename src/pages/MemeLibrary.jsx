@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MemeCard from '../components/MemeCard';
 import NavBar from '../components/NavBar';
-import { Link } from 'react-router-dom';
+
 
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
@@ -24,7 +24,7 @@ function MemeLibrary() {
             .catch(error => {
                 setError(error.message);
             });
-    }, []);
+    }, [memes]);
 
     const handleLikeClick = (id) => {
         const updatedMemes = memes.map(meme => {
@@ -68,7 +68,7 @@ function MemeLibrary() {
             <input className="Search"
                         type="text"
                         placeholder=" What meme you dreamin?"
-                        onChange={handleSearch}
+                        onChange={handleSearch} 
                         value={searchedMeme}
                     />
                 {error && <p>Error: {error}</p>}
