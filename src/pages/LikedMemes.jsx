@@ -22,10 +22,10 @@ function LikedMemes() {
     }, []);
 
     return (
-        <div className="liked-memes">
+        <div>
             <NavBar />
-            <h2>Liked Memes</h2>
-            <div className="memes-container">
+            
+            <div className="liked-memes">
                 {likedMemes.map(meme => (
                     <div key={meme.id}>
                         <img src={meme.image} alt={meme.title} />

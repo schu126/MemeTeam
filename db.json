@@ -6,9 +6,7 @@
       "category": "celebrity",
       "image": "https://i.imgflip.com/8hxz4r.jpg",
       "tags": [
-        "Drake",
-        "code",
-        "software"
+        "Flatiron School"
       ],
       "liked": true
     },
@@ -22,7 +20,7 @@
         "happy",
         "sad"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "3",
@@ -46,7 +44,7 @@
         "argument",
         "fight"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "5",
@@ -62,16 +60,7 @@
       "category": "misc",
       "image": "https://i.imgflip.com/6dnjg3.jpg",
       "tags": [],
-      "liked": false
-    },
-    {
-      "id": "ae9b",
-      "title": "",
-      "category": "sponge bob",
-      "image": "gbjh",
-      "tags": [
-        "hgbuhj"
-      ]
+      "liked": true
     },
     {
       "id": "2ee6",
@@ -84,7 +73,8 @@
         "who dis?",
         "sponge bob",
         "start fish"
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "f7c3",
@@ -94,7 +84,8 @@
       "tags": [
         "this is where I post from",
         "sponge bob"
-      ]
+      ],
+      "liked": false
     },
     {
       "id": "ba4f",
@@ -106,7 +97,8 @@
         "the beat the lyrics",
         "music",
         ""
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "63af",
@@ -130,7 +122,8 @@
         "driving test",
         "DUI",
         ""
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "5c0f",
@@ -152,7 +145,8 @@
         "animal meme",
         "talk about your trash",
         ""
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "592f",
