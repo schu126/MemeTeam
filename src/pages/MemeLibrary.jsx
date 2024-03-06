@@ -24,7 +24,7 @@ function MemeLibrary() {
             .catch(error => {
                 setError(error.message);
             });
-    }, [memes]);
+    }, [setMemes]);
 
     const handleLikeClick = (id) => {
         const updatedMemes = memes.map(meme => {
@@ -58,25 +58,26 @@ function MemeLibrary() {
         )
     ));
 
-
     return (
         <div>
-            <header>
-                <NavBar />
-            </header>
-            <main className='MemesLibrary'>
-            <input className="Search"
-                        type="text"
-                        placeholder=" What meme you dreamin?"
-                        onChange={handleSearch} 
-                        value={searchedMeme}
-                    />
-                {error && <p>Error: {error}</p>}
-                {memesList}
-
-            </main>
+          <header>
+            <NavBar />
+          </header>
+          <main className='MemesLibrary'>
+            <div className="search-container">
+              <input
+                className="Search"
+                type="text"
+                placeholder=" What meme you dreamin?"
+                onChange={handleSearch}
+                value={searchedMeme}
+              />
+            </div>
+            {error && <p>Error: {error}</p>}
+            {memesList}
+          </main>
         </div>
-    );
+      );
 }
 
 export default MemeLibrary;

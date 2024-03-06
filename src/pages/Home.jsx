@@ -28,19 +28,20 @@ function Home() {
     setRandomMeme(meme);
   };
 
+  
   return (
     <div>
       <NavBar />
       <h2>Home Page</h2>
       {randomMeme && (
         <div>
-          <h3>Random Meme</h3>
+          {/* <h3>Random Meme</h3> */}
           <MemeCard meme={randomMeme} />
         </div>
       )}
       <button onClick={generateRandomMeme}>Meme Me</button>
       <br />
-      <Link to="/library">Go to Meme Library</Link>
+      {/* <Link to="/library">Go to Meme Library</Link> */}
     </div>
   );
 }

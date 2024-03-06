@@ -27,6 +27,7 @@ function MemeDetail() {
 
     }, []);
 
+    
     return (
         <>
         <NavBar />
