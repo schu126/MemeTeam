@@ -24,7 +24,7 @@ function MemeLibrary() {
             .catch(error => {
                 setError(error.message);
             });
-    }, [memes]);
+    }, []);
 
     const handleLikeClick = (id) => {
         const updatedMemes = memes.map(meme => {
@@ -36,6 +36,7 @@ function MemeLibrary() {
         setMemes(updatedMemes); 
         // Update the state to see button change
         // Add fetch request here to update the like status on the server
+        
     };
 
     // const memesList = memes.map(meme => (

@@ -17,13 +17,6 @@ function Home() {
       });
   }, []);
 
-  useEffect(() => {
-    if (memes.length > 0) {
-      const meme = getRandomMeme();
-      setRandomMeme(meme);
-    }
-  }, [memes]);
-
   const getRandomMeme = () => {
     if (memes.length === 0) return null;
     const randomIndex = Math.floor(Math.random() * memes.length);
@@ -35,7 +28,7 @@ function Home() {
     setRandomMeme(meme);
   };
 
-  const handleLikeClick = (id) => {
+    const handleLikeClick = (id) => {
     const updatedMemes = memes.map(meme => {
         if (meme.id === id) {
             return { ...meme, liked: !meme.liked };
@@ -44,20 +37,17 @@ function Home() {
     });
     setMemes(updatedMemes);
   }
-  
+
   return (
     <div>
       <NavBar />
       <h2>Home Page</h2>
       {randomMeme && (
-        <div>
-          <h3>Random Meme</h3>
-          <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick}/>
+        <div>          
+          <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick} />
         </div>
       )}
       <button onClick={generateRandomMeme}>Meme Me</button>
-      <br />
-      <Link to="/library">Go to Meme Library</Link>
     </div>
   );
 }
