@@ -17,6 +17,13 @@ function Home() {
       });
   }, []);
 
+  useEffect(() => {
+    if (memes.length > 0) {
+      const meme = getRandomMeme();
+      setRandomMeme(meme);
+    }
+  }, [memes]);
+
   const getRandomMeme = () => {
     if (memes.length === 0) return null;
     const randomIndex = Math.floor(Math.random() * memes.length);
