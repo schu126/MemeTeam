@@ -90,13 +90,13 @@
 .nav-link.active {
   font-weight: bold;
 }
-
+/* 
 .memesLibrary {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .memesLibrary img {
   width: 200px;
