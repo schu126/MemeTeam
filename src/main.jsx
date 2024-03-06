@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./routes.jsx";
 // import NavBar from "./components/NavBar.jsx";
 // import Home from "./pages/Home";
-import "./index.css";
+import "./components/index.css";
 
 const router = createBrowserRouter(routes);
 
