@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function MemeCard({ meme, handleLikeClick }) {
+function MemeCard({ meme, setMeme, handleLikeClick }) {
     const [newTags, setNewTags] = useState('');
     const [editingTags, setEditingTags] = useState(false);
 
@@ -28,6 +28,7 @@ function MemeCard({ meme, handleLikeClick }) {
     const handleAddTags = () => {
         setEditingTags(true);
         setNewTags('');
+        setMeme();
     };
 
     // Handle Patch for the Edit feature
@@ -49,6 +50,7 @@ function MemeCard({ meme, handleLikeClick }) {
         .catch(error => {
             console.error('Error updating tags:', error);
         });
+        console.log("tag patch sent");
     };
 
     return (
