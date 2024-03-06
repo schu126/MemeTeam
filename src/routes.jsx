@@ -4,6 +4,7 @@ import LikedMemes from "./pages/LikedMemes";
 import NewMemeForm from "./pages/NewMemeForm";
 import MemeLibrary from "./pages/MemeLibrary";
 import ErrorPage from "./pages/ErrorPage";
+import MemeCard from "./components/MemeCard";
 // import NavBar from "./components/NavBar";
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
   {
     path: "/library",
     element: <MemeLibrary />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/memes/:id", 
+    element: <MemeCard />, 
     errorElement: <ErrorPage />
   },
   // {
