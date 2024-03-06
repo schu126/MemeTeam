@@ -24,7 +24,7 @@ function MemeLibrary() {
             .catch(error => {
                 setError(error.message);
             });
-    }, []);
+    }, [memes]);
 
     const handleLikeClick = (id) => {
         const updatedMemes = memes.map(meme => {

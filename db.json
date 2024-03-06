@@ -8,7 +8,7 @@
       "tags": [
         "mo"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
         "happy",
         "sad"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "3",
@@ -271,10 +271,7 @@
       "category": "misc",
       "image": "https://i.chzbgr.com/full/9888588288/h01584014/brudder",
       "tags": [
-        "brudder",
-        "cow",
-        "bandana",
-        "mustache"
+        "brento"
       ],
       "liked": false
     },
