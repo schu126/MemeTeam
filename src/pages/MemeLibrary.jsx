@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MemeCard from '../components/MemeCard';
 import NavBar from '../components/NavBar';
+import { Link } from 'react-router-dom';
 
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
@@ -34,10 +35,17 @@ function MemeLibrary() {
         // Update the state to see button change
         // Add fetch request here to update the like status on the server
     };
+   
+    const handleSearch = (event) => {
+        setSearchedMeme(event.target.value);
+    };
 
-    const memesList = memes.map(meme => (
-        meme.image && (
-            <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
+    const filteredMemesList = memes.filter(meme =>
+        meme.tags.some(tag => tag.toLowerCase().includes(searchedMeme.toLowerCase()))
+    );
+//     const memesList = memes.map(meme => (
+//         meme.image && (
+//             <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
         )
     ));
 
@@ -46,11 +54,21 @@ function MemeLibrary() {
             <header>
                 <NavBar />
             </header>
-            <main className='MemesLibrary'>
-                {error && <p>Error: {error}</p>}
-                {memesList}
-            </main>
-        </div>
+                <main className="MemesLibrary">
+                    <input className="Search"
+                        type="text"
+                        placeholder=" What meme you dreamin?"
+                        onChange={handleSearch}
+                        value={searchedMeme}
+                    />
+                    {error && <p>Error: {error}</p>}
+                    {filteredMemesList.map(meme => (
+                        <Link key={meme.id} to={`/memes/${meme.id}`}>
+                            <MemeCard meme={meme} handleLikeClick={handleLikeClick} />
+                        </Link>
+                    ))}
+                </main>
+            </div>
     );
 }
 
