@@ -35,6 +35,16 @@ function Home() {
     setRandomMeme(meme);
   };
 
+  const handleLikeClick = (id) => {
+    const updatedMemes = memes.map(meme => {
+        if (meme.id === id) {
+            return { ...meme, liked: !meme.liked };
+        }
+        return meme;
+    });
+    setMemes(updatedMemes);
+  }
+  
   return (
     <div>
       <NavBar />
@@ -42,7 +52,7 @@ function Home() {
       {randomMeme && (
         <div>
           <h3>Random Meme</h3>
-          <MemeCard meme={randomMeme} />
+          <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick}/>
         </div>
       )}
       <button onClick={generateRandomMeme}>Meme Me</button>

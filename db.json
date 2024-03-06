@@ -8,7 +8,7 @@
       "tags": [
         "mo"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
         "happy",
         "sad"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "3",
@@ -70,7 +70,7 @@
         "comp sci",
         "computer science"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "8",
@@ -96,7 +96,7 @@
         "coding",
         "code"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "10",
@@ -123,7 +123,7 @@
         "late",
         "boss"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "12",
@@ -131,10 +131,7 @@
       "category": "misc",
       "image": "https://i.chzbgr.com/full/9888982528/h9BF47325/arrays-start-at-1-its-first-word-live-local-late-breaking-baby-found-dumpster",
       "tags": [
-        "programmer",
-        "comp sci",
-        "coding",
-        "code"
+        "seth"
       ],
       "liked": false
     },
@@ -146,7 +143,7 @@
       "tags": [
         "test"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "14",
@@ -172,7 +169,7 @@
         "book review",
         "subway"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "16",
@@ -185,7 +182,7 @@
         "uber",
         "kanye"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "17",
@@ -198,7 +195,7 @@
         "smile",
         "finger"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "18",
@@ -273,7 +270,7 @@
       "tags": [
         "brento"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "24",
@@ -299,7 +296,7 @@
         "know",
         "simpsons"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "26",
@@ -312,7 +309,7 @@
         "squidward",
         "weasley"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "27",
@@ -338,7 +335,7 @@
         "counting",
         "school"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "2ee6",
@@ -351,7 +348,8 @@
         "who dis?",
         "sponge bob",
         "start fish"
-      ]
+      ],
+      "liked": false
     },
     {
       "id": "f7c3",
@@ -373,7 +371,8 @@
         "the beat the lyrics",
         "music",
         ""
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "63af",
@@ -385,7 +384,8 @@
         "snooze",
         "sleep",
         "alarm clock"
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "a7ab",
@@ -405,9 +405,9 @@
       "category": "classics",
       "image": "https://www.siliconrepublic.com/wp-content/uploads/2014/12/img/bad-luck-brian-memes-games.jpg",
       "tags": [
-        "bad luck brian",
-        "hunger games"
-      ]
+        ""
+      ],
+      "liked": true
     },
     {
       "id": "35fe",
@@ -419,7 +419,8 @@
         "animal meme",
         "talk about your trash",
         ""
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "592f",
@@ -430,7 +431,8 @@
         "animal",
         "grandparents",
         "talking about your job"
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "c1ff",
@@ -441,7 +443,8 @@
         "smug dog",
         "animal",
         "cats and dogs"
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "d957",
@@ -464,7 +467,8 @@
         "cheese",
         "take my picture",
         "dog"
-      ]
+      ],
+      "liked": false
     }
   ]
 }
