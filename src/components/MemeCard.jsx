@@ -52,24 +52,28 @@ function MemeCard({ meme, handleLikeClick }) {
     };
 
     return (
-        <div className='MemeCard'>
-            <img src={meme.image} alt={meme.title || 'Meme'} />
-            <div className="button-container">
-                <button onClick={handleAddTags}>📝</button>
-                <button onClick={handleLike}>
-                    {meme.liked ? '❤️ Liked' : '🤍 Like'}
-                </button>
-            </div>
-            {/* && is a conditional rendering in jsx */}
-            {editingTags && (
-                <div className="edit-container">
-                    <input type="text" placeholder="Add tags separated by a comma" 
-                    value={newTags} onChange={e => setNewTags(e.target.value)} />
-                    <button onClick={handleSubmitTags}>Save</button>
-                </div>
-            )}
-        </div>
-    );
+      <div className='MemeCard'>
+          <img src={meme.image} alt={meme.title || 'Meme'} />
+          <div className="button-container">
+              <button onClick={handleAddTags}>📝</button>
+              <button onClick={handleLike}>
+                  {meme.liked ? '❤️ Liked' : '🤍 Like'}
+              </button>
+      </div>
+          {/* && is a conditional rendering in jsx */}
+          {editingTags && (
+              <div className="edit-container">
+                  <input 
+                  type="text" 
+                  placeholder="Add tags separated by a comma" 
+                  value={newTags} 
+                  onChange={e => setNewTags(e.target.value)} 
+                  />
+                  <button onClick={handleSubmitTags}>Save</button>
+              </div>
+          )}
+      </div>
+  );
 }
 
 export default MemeCard;

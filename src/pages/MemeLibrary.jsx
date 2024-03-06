@@ -38,6 +38,12 @@ function MemeLibrary() {
         // Add fetch request here to update the like status on the server
     };
 
+    // const memesList = memes.map(meme => (
+    //     meme.image && (
+    //         <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
+    //     )
+    // ));
+
     const handleSearch = (event) => {
         setSearchedMeme(event.target.value);
     };
@@ -46,28 +52,30 @@ function MemeLibrary() {
         meme.tags.some(tag => tag.toLowerCase().includes(searchedMeme.toLowerCase()))
     );
 
+    const memesList = filteredMemesList.map(meme => (
+        meme.image && (
+            <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
+        )
+    ));
+
+
     return (
-        <>
-            <div className="MemesLibrary">
-                <header>
-                    <NavBar />
-                </header>
-                <main>
-                    <input className="Search"
+        <div>
+            <header>
+                <NavBar />
+            </header>
+            <main className='MemesLibrary'>
+            <input className="Search"
                         type="text"
                         placeholder=" What meme you dreamin?"
                         onChange={handleSearch}
                         value={searchedMeme}
                     />
-                    {error && <p>Error: {error}</p>}
-                    {filteredMemesList.map(meme => (
-                        <Link key={meme.id} to={`/memes/${meme.id}`}>
-                            <MemeCard meme={meme} />
-                        </Link>
-                    ))}
-                </main>
-            </div>
-        </>
+                {error && <p>Error: {error}</p>}
+                {memesList}
+
+            </main>
+        </div>
     );
 }
 
