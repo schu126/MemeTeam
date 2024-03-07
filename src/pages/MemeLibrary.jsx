@@ -3,6 +3,8 @@ import MemeCard from '../components/MemeCard';
 import NavBar from '../components/NavBar';
 import { Link } from 'react-router-dom';
 
+
+
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
     const [error, setError] = useState(null);
@@ -22,8 +24,9 @@ function MemeLibrary() {
             .catch(error => {
                 setError(error.message);
             });
-    }, []);
 
+    }, [setMemes]);
+  
     const handleLikeClick = (id) => {
         const updatedMemes = memes.map(meme => {
             if (meme.id === id) {
@@ -43,33 +46,37 @@ function MemeLibrary() {
     const filteredMemesList = memes.filter(meme =>
         meme.tags.some(tag => tag.toLowerCase().includes(searchedMeme.toLowerCase()))
     );
-//     const memesList = memes.map(meme => (
-//         meme.image && (
-//             <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
+
+
+    const memesList = filteredMemesList.map(meme => (
+        meme.image && (
+            <MemeCard key={meme.id} meme={meme} className="MemeCardsContainer" handleLikeClick={handleLikeClick} /> // Pass handleLikeClick function
+
         )
     ));
 
     return (
-        <div>
-            <header>
-                <NavBar />
-            </header>
-                <main className="MemesLibrary">
-                    <input className="Search"
-                        type="text"
-                        placeholder=" What meme you dreamin?"
-                        onChange={handleSearch}
-                        value={searchedMeme}
-                    />
-                    {error && <p>Error: {error}</p>}
-                    {filteredMemesList.map(meme => (
-                        <Link key={meme.id} to={`/memes/${meme.id}`}>
-                            <MemeCard meme={meme} handleLikeClick={handleLikeClick} />
-                        </Link>
-                    ))}
-                </main>
+        <div>     
+        
+          <NavBar />
+        
+        <div className="page-header">
+                <h1><input
+                className="Search"
+                type="text"
+                placeholder=" What meme you dreamin?"
+                onChange={handleSearch}
+                value={searchedMeme}
+              /></h1>
             </div>
-    );
+       
+            {error && <p>Error: {error}</p>}
+            <div className = "meme-list-container">
+            {memesList} </div>
+          
+        </div>
+      );
+
 }
 
 export default MemeLibrary;

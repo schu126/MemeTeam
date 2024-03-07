@@ -58,7 +58,9 @@ function NewMemeForm() {
   
       <div className="upload-form">
           <NavBar />
-          <h2>Upload Meme</h2>
+          <div className='page-header'>
+          <h2 >Upload Meme</h2>
+          </div>
           <form onSubmit={handleSubmit}>
               <div>
                   <label htmlFor="image">Image Upload:</label>

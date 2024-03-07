@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import MemeCard from '../components/MemeCard'; 
-import { Link } from 'react-router-dom';
+
 
 function Home() {
   const [memes, setMemes] = useState([]);
-  const [randomMeme, setRandomMeme] = useState(null);
+  const [randomMeme, setRandomMeme] = useState([1]);
 
   useEffect(() => {
     fetch('http://localhost:3000/memes')
@@ -28,19 +28,27 @@ function Home() {
     setRandomMeme(meme);
   };
 
+    const handleLikeClick = (id) => {
+    const updatedMemes = memes.map(meme => {
+        if (meme.id === id) {
+            return { ...meme, liked: !meme.liked };
+        }
+        return meme;
+    });
+    setMemes(updatedMemes);
+  }
+
   return (
-    <div>
+    <div className="home-container">
       <NavBar />
-      <h2>Home Page</h2>
+      <h2>Meme of the Day</h2>
+      <button className="random-meme-button" onClick={generateRandomMeme}>Meme Me</button>
       {randomMeme && (
-        <div>
-          <h3>Random Meme</h3>
-          <MemeCard meme={randomMeme} />
+        <div className="random-meme-container">          
+          <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick} memeClassName="home-meme"/>
         </div>
       )}
-      <button onClick={generateRandomMeme}>Meme Me</button>
-      <br />
-      <Link to="/library">Go to Meme Library</Link>
+     
     </div>
   );
 }

@@ -3,6 +3,7 @@ import MemeCard from '../components/MemeCard';
 import { useParams } from 'react-router-dom';
 import NavBar from './NavBar';
 
+
 function MemeDetail() {
 
     const {id} = useParams();
@@ -26,6 +27,7 @@ function MemeDetail() {
             });
 
     }, []);
+
 
     return (
         <>
