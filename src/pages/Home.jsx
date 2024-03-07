@@ -42,12 +42,13 @@ function Home() {
     <div className="home-container">
       <NavBar />
       <h2>Meme of the Day</h2>
+      <button className="random-meme-button" onClick={generateRandomMeme}>Meme Me</button>
       {randomMeme && (
         <div className="random-meme-container">          
           <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick} memeClassName="home-meme"/>
         </div>
       )}
-      <button className="random-meme-button" onClick={generateRandomMeme}>Meme Me</button>
+     
     </div>
   );
 }
