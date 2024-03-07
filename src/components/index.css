@@ -86,7 +86,14 @@
   justify-content: space-around; /* Distribute space between items */
   padding: 20px; /* Add padding around the meme cards */
 }
-
+.Search {
+  margin-bottom: 20px; /* Add margin below the search bar */
+  padding: 10px; /* Adjust padding for the search input */
+  font-size: 1rem; /* Adjust font size for the search input */
+  width: 300px; /* Adjust width of the search input */
+  border: 2px solid #ccc; /* Add border to the search input */
+  border-radius: 5px; /* Add border radius to the search input */
+}
 .MemeCard {
   /* border: 1px solid #ccc; Thin border around each meme card */
   padding: 10px; /* Add padding around each meme card */
@@ -100,6 +107,8 @@
   margin-bottom: 10px; /* Add margin at the bottom of each meme card */
   transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow effect */
 }
+
+
 
 .liked-memes {
   display: flex;
@@ -161,4 +170,49 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 60px;
+  color: #fff
+}
+.home-container h2 {
+  font-size: 3rem; /* Increase font size for header */
+  margin-bottom: 20px; /* Add margin below the header */
+}
+
+.random-meme-container {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: center; /* Center the meme horizontally */
+  align-items: center; /* Center the meme vertically */
+  margin-bottom: 20px;
+}
+
+
+.random-meme-button {
+  padding: 20px 40px; /* Adjust padding for the button */
+  font-size: 1.5rem;
+  background-color: #3b433b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.random-meme-button:hover {
+  background-color: #2e322e; /* Darken background color on hover */
+}
+
+.home-meme {
+  height: 420px; /* Increase height of images by about 20% */
+  width: auto;
+  max-width: 100%; /* Ensure the image does not exceed the width of its container */
 }

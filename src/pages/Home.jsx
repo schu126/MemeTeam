@@ -39,15 +39,15 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="home-container">
       <NavBar />
-      <h2>Home Page</h2>
+      <h2>Meme of the Day</h2>
       {randomMeme && (
-        <div>          
-          <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick} />
+        <div className="random-meme-container">          
+          <MemeCard meme={randomMeme} handleLikeClick={handleLikeClick} memeClassName="home-meme"/>
         </div>
       )}
-      <button onClick={generateRandomMeme}>Meme Me</button>
+      <button className="random-meme-button" onClick={generateRandomMeme}>Meme Me</button>
     </div>
   );
 }

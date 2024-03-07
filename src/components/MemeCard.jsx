@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function MemeCard({ meme, handleLikeClick }) {
+function MemeCard({ meme, handleLikeClick, memeClassName }) {
     const [newTags, setNewTags] = useState('');
     const [editingTags, setEditingTags] = useState(false);
 
@@ -53,7 +53,7 @@ function MemeCard({ meme, handleLikeClick }) {
 
     return (
         <div className='MemeCard'>
-            <img src={meme.image} alt={meme.title || 'Meme'} />
+            <img  src={meme.image} alt={meme.title || 'Meme'} className={memeClassName} />
             <div className="button-container">
                 <button onClick={handleAddTags}>📝</button>
                 <button onClick={handleLike}>

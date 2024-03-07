@@ -265,7 +265,7 @@
       "tags": [
         "brento"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "24",
@@ -330,7 +330,7 @@
         "counting",
         "school"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "2ee6",
@@ -460,7 +460,7 @@
         "take my picture",
         "dog"
       ],
-      "liked": false
+      "liked": true
     }
   ]
 }
