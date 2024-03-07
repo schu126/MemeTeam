@@ -1,237 +1,308 @@
-/* Root styles */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 120%; /* Increase font size by 20% */
-  background-color: #242424;
-}
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 120%; /* Increase font size by 20% */
+    background-color: #242424;
+  }
 
-/* Navbar styles */
+/* ------- NAVBAR--------- */
+
 .nav {
-  color: #ccc;
-  background-color: #333;
-  padding: 5px;
-  text-align: center; 
-  position: fixed; 
-  top: 0; 
-  left: 0;
-  right: 0;
-  z-index: 1000;
-   /* Ensure the navbar stays on top of other content */
+    color: #ccc;
+    background-color: #333;
+    padding: 5px;
+    text-align: center; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000;
+     /* Ensure the navbar stays on top of other content */
+  }
+  
+  .nav-link {
+    color: #fff;
+  
+    margin-right: 20px;
+    padding: 20px;
+  }
+  
+  .nav .links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .nav .links a:hover {
+    color: #ccc;
+  }
+  
+  
+  /* Links container */
+  .links {
+    font-size: 1.75em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Navigation links */
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1.75em;
+  }
+  
+  /* Active link styles */
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  .MemeCardsContainer {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow meme cards to wrap to the next row */
+    justify-content: flex-start; /* Align meme cards to the start of the container */
+  }
+  .meme-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: 20px;
+  }
+
+  .liked-meme-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+  }
+
+  .LikedMemeCard {
+    border: 1px solid #ccc; /* Thin border around the card */
+    padding: 10px; /* Padding around the card */
+    width: 300px; /* Set width of the card */
+    max-width: 100%; /* Ensure the card does not exceed its container */
+    border-radius: 5px; /* Rounded corners for the card */
+    margin-bottom: 20px; /* Add margin at the bottom of each card */
+    background-color: #fff; /* Background color of the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  .MemeCard {
+    /* border: 1px solid #ccc;  */
+    padding: 10px; /* Padding around the card */
+    width: 300px; /* Set width of the card */
+    max-width: 100%; /* Ensure the card does not exceed its container */
+    border-radius: 5px; /* Rounded corners for the card */
+    margin-bottom: 20px; /* Add margin at the bottom of each card */
+    background-color: #e1e1e1;
+    /* background-color: #fff; Background color of the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  /* Smooth transition for box-shadow effect */
+
 }
 
-.nav-link {
-  color: #fff;
-  text-decoration: underline;
-  margin-right: 20px;
-  padding: 20px;
-}
-
-.nav .links a.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.nav .links a:hover {
-  color: #ccc;
-}
-
-
-/* Links container */
-.links {
-  font-size: 1.75em;
-  display: flex;
-  justify-content: center;
-}
-
-/* Navigation links */
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-/* Active link styles */
-.nav-link.active {
-  font-weight: bold;
-}
-
-
-/* MemesLibrary styles */
-.MemesLibrary {
-  margin-top: 260px;
-  position: relative;
-  display: flex; /* Use flexbox layout */
-  flex-wrap: wrap; /* Allow cards to wrap to the next row */
-  justify-content: space-around; /* Distribute space between items */
-  padding: 20px; /* Add padding around the meme cards */
-}
-
-.MemeCard {
-  /* border: 1px solid #ccc; Thin border around each meme card */
-  padding: 10px; /* Add padding around each meme card */
-  min-width: 300px; /* Set minimum width of each meme card */
-  max-width: 500px;
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Arrange elements vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: space-between; /* Align items to be spaced evenly */
-  margin-right: 10px; /* Add margin between meme cards */
-  margin-bottom: 10px; /* Add margin at the bottom of each meme card */
-  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow effect */
-}
-
-.liked-memes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
- 
-}
-
-.liked-memes img {
-  height: 350px; /* Set height of images to 350px */
-  width: auto;
-  max-width: 350; /* Let the width adjust proportionally */
-}
-/* Apply box-shadow when hovered over */
 .MemeCard:hover {
-  box-shadow: 0 0 10px rgba(154, 152, 152, 0.3); /* Add box-shadow effect */
-}
-
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.927); 
+    transform: scale(1.15);/* Add box-shadow effect */
+  }
+  
 .MemeCard img {
-  height: 350px; /* Set height of images to 350px */
-  width: auto;
-  max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    
+    width: 100%; /* Make the image fill the card horizontally */
+    border-top-left-radius: 5px; /* Rounded corners for the top-left of the image */
+    border-top-right-radius: 5px; /* Rounded corners for the top-right of the image */
 }
 
-.MemeCard button {
-  padding: 5px; /* Adjust padding for buttons */
-  font-size: 14px; /* Set font size for buttons */
-  margin-top: 2px; /* Add margin between buttons */
+.card-content {
+    padding: 10px; /* Padding for the content within the card */
 }
 
 .button-container {
-  margin-top: 8px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  padding-bottom: 5px;
+   margin-top: 10px;
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Distribute space evenly between buttons */
+    margin-bottom: 5px; /* Add margin at the bottom of the button container */
 }
 
 .button-container button {
-  margin-right: 10px; /* Add margin between buttons */
-  padding: 10px 20px;
-  background-color: #3b433b;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+    padding: 8px 15px; /* Adjust padding for buttons */
+    font-size: 14px; /* Set font size for buttons */
+    background-color: #62626355; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Set cursor to pointer */
 }
 
 .button-container button:hover {
-  background-color: #3b433b;
+    background-color: #0056b3; /* Button background color on hover */
 }
 
 .edit-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+    margin-top: 10px; /* Add margin at the top of the edit container */
+}
+
+.edit-container input {
+    width: calc(100% - 80px); /* Adjust input width */
+    padding: 8px; /* Padding for the input */
+    margin-bottom: 10px; /* Add margin at the bottom of the input */
+    border: 1px solid #ccc; /* Input border */
+    border-radius: 5px; /* Rounded corners for the input */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.edit-container button {
+    padding: 8px 15px; /* Adjust padding for buttons */
+    font-size: 14px; /* Set font size for buttons */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; 
+}
+
+/* Styling for the page header */
+.page-header {
+    text-align: center; /* Center align the content */
+    margin-top: 60px; /* Adjust margin from the top */
+  }
   
-}
+  .page-header h1 {
+    font-size: 24px; /* Adjust font size */
+    margin-bottom: 40px; /* Adjust margin bottom */
+    margin-top: 140px;
+    font-size: 1.75em;
+    color: #fff;
+  }
+  
+  .Search {
+    width: 60%; /* Adjust width of the input field */
+    padding: 8px; /* Adjust padding */
+    border: none; /* Remove default border */
+    background-color: #fff; /* Background color */
+    border-radius: 5px; /* Border radius */
+    box-sizing: border-box; /* Include padding in width */
+    outline: none; /* Remove focus outline */
+    font-size: 1.25em; /* Increase text size */
+  }
+  
+  .Search::placeholder {
+    color: #999; /* Placeholder color */
+  }
+  
+  .Search:focus {
+    border: 1px solid #007bff; /* Border color when focused */
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* 75% of the viewport height */
+  }
+  
+  h2 {
+    font-size: 50px; /* Adjust font size as needed */
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 80px; /* Add some bottom margin for spacing */
+    color:#f9f9f9; 
+  }
+  form {
+    width: 30%; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form select {
+    font-size: 1em;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  form p {
+    margin-top: 6px;
+    margin-bottom: 80px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4297f1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #27323d;
+  }
+  
 
-.search-container {
-  height: 150px;
-  margin-top: 89px;
-  position: fixed; /* Fixed positioning */
-  top: 0; /* Align to the top of the page */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  background-color: #333; /* Background color */
-  padding: 10px 15px; /* Padding */
-  width: 100%; /* Width of the page */
-}
+  /* ------HOME----- */
 
-.Search {
-  width: 60%; /* Width of the input field */
-  padding: 8px; /* Padding */
-  border: none; /* Remove default border */
-  background-color: #fff; /* Background color */
-  border-radius: 5px; /* Border radius */
-  box-sizing: border-box; /* Include padding in width */
-  outline: none; /* Remove focus outline */
-  font-size: 1.25em; /* Increase text size */
-  position: absolute; /* Absolute positioning */
-  top: 50%; /* Align to the middle vertically */
-  left: 50%; /* Align to the middle horizontally */
-  transform: translate(-50%, -50%); /* Center horizontally and vertically */
-}
 
-.Search::placeholder {
-  color: #999; /* Placeholder color */
-}
-
-.Search:focus {
-  border: 1px solid #007bff; /* Border color when focused */
-}
-
-/* Form CSS - Brento  */
-.upload-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 70vh; /* 75% of the viewport height */
-}
-
-h2 {
-  font-size: 50px; /* Adjust font size as needed */
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 40px; /* Add some bottom margin for spacing */
-  color:#f9f9f9; 
-}
-form {
-  width: 30%; /* Adjust width as needed */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input[type="text"],
-form select {
-  font-size: 1em;
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-form p {
-  margin-top: 6px;
-  margin-bottom: 80px;
-}
-
-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4297f1;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #27323d;
-}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px;
+    color: #fff
+  }
+  .home-container h2 {
+    font-size: 3rem; /* Increase font size for header */
+    margin-bottom: 20px; /* Add margin below the header */
+  }
+  
+  .random-meme-container {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    justify-content: center; /* Center the meme horizontally */
+    align-items: center; /* Center the meme vertically */
+    margin-bottom: 20px;
+  }
+  
+  
+  .random-meme-button {
+    padding: 20px 40px; /* Adjust padding for the button */
+    font-size: 1.5rem;
+    background-color: #3b433b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .random-meme-button:hover {
+    background-color: #2e322e; /* Darken background color on hover */
+  }
+  
+  .home-meme {
+    height: 420px; /* Increase height of images by about 20% */
+    width: auto;
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+  }

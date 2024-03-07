@@ -6,9 +6,9 @@
       "category": "celebrity",
       "image": "https://i.imgflip.com/8hxz4r.jpg",
       "tags": [
-        "dat test"
+        ""
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
         "happy",
         "sad"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "3",
@@ -40,7 +40,7 @@
       "tags": [
         "mo"
       ],
-      "liked": true
+      "liked": false
     },
     {
       "id": "5",
@@ -102,20 +102,7 @@
       "category": "misc",
       "image": "https://i.pinimg.com/736x/ac/ba/2e/acba2e8cd42129e21e35d5e642f5f5eb.jpg",
       "tags": [
-        "programmer",
-        "comp sci",
-        "coding",
-        "code"
-      ],
-      "liked": true
-    },
-    {
-      "id": "11",
-      "title": "",
-      "category": "misc",
-      "image": "https://www.dictionary.com/e/wp-content/uploads/2018/01/memes_gone_wrong4-790x310.jpg",
-      "tags": [
-        "baby"
+        "teacher"
       ],
       "liked": false
     },
@@ -130,7 +117,7 @@
         "coding",
         "code"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "13",
@@ -254,7 +241,7 @@
         "dead",
         "body bag"
       ],
-      "liked": false
+      "liked": true
     },
     {
       "id": "23",
@@ -431,7 +418,8 @@
         "smug dog",
         "animal",
         "cats and dogs"
-      ]
+      ],
+      "liked": true
     },
     {
       "id": "d957",
@@ -462,9 +450,9 @@
       "category": "misc",
       "image": "https://staticg.sportskeeda.com/editor/2021/09/af5e6-16312975817371-800.jpg?w=840",
       "tags": [
-        "vince mcmahon"
+        "My Man"
       ],
-      "liked": true
+      "liked": false
     }
   ]
 }

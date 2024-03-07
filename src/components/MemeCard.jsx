@@ -24,13 +24,12 @@ function MemeCard({ meme, handleLikeClick }) {
             console.error('Error updating like status:', error);
         });
     };
-
-    const handleAddTags = () => {
-        // Toggle editingTags state when the button is clicked
-        setEditingTags(prevEditingTags => !prevEditingTags);
-        setNewTags('');
+    const handleToggleEditingTags = () => {
+        setEditingTags(prevState => !prevState);
+        setNewTags(''); // Reset newTags when toggling
     };
 
+    // Handle Patch for the Edit feature
     const handleSubmitTags = () => {
         fetch(`http://localhost:3000/memes/${meme.id}`, {
             method: 'PATCH',
@@ -50,23 +49,19 @@ function MemeCard({ meme, handleLikeClick }) {
             console.error('Error updating tags:', error);
         });
     };
-
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            handleSubmitTags();
-        }
-    };
-
     return (
         <div className='MemeCard'>
+            <h1></h1>
             <img src={meme.image} alt={meme.title || 'Meme'} />
             <div className="button-container">
-                <button onClick={handleAddTags}>📝</button>
+                <button onClick={handleToggleEditingTags}>
+                    {editingTags ? '❌ Close Tags' : '📝 Add Tags'}
+                </button>
                 <button onClick={handleLike}>
                     {meme.liked ? '❤️ Liked' : '🤍 Like'}
                 </button>
             </div>
-            {/* Conditionally rendering the input field */}
+            {/* && is a conditional rendering in jsx */}
             {editingTags && (
                 <div className="edit-container">
                     <input 
@@ -74,7 +69,6 @@ function MemeCard({ meme, handleLikeClick }) {
                         placeholder="Add tags separated by a comma" 
                         value={newTags} 
                         onChange={e => setNewTags(e.target.value)} 
-                        onKeyPress={handleKeyPress} // Listen for Enter key press
                     />
                     <button onClick={handleSubmitTags}>Save</button>
                 </div>

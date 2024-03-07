@@ -3,11 +3,11 @@ import MemeCard from '../components/MemeCard';
 import NavBar from '../components/NavBar';
 
 
+
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
     const [error, setError] = useState(null);
     const [searchedMeme, setSearchedMeme] = useState('');
-
 
     useEffect(() => {
         fetch('http://localhost:3000/memes')
@@ -34,15 +34,8 @@ function MemeLibrary() {
             return meme;
         });
         setMemes(updatedMemes); 
-        // Update the state to see button change
         // Add fetch request here to update the like status on the server
     };
-
-    // const memesList = memes.map(meme => (
-    //     meme.image && (
-    //         <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
-    //     )
-    // ));
 
     const handleSearch = (event) => {
         setSearchedMeme(event.target.value);
@@ -54,28 +47,26 @@ function MemeLibrary() {
 
     const memesList = filteredMemesList.map(meme => (
         meme.image && (
-            <MemeCard key={meme.id} meme={meme} handleLikeClick={handleLikeClick} />
+            <MemeCard key={meme.id} meme={meme} className="MemeCardsContainer" handleLikeClick={handleLikeClick} /> // Pass handleLikeClick function
         )
     ));
 
     return (
-        <div>
-          <header>
-            <NavBar />
-          </header>
-          <main className='MemesLibrary'>
-            <div className="search-container">
-              <input
+        <div>     <NavBar />
+          <div className="page-header">
+                <h1><input
                 className="Search"
                 type="text"
                 placeholder=" What meme you dreamin?"
                 onChange={handleSearch}
                 value={searchedMeme}
-              />
+              /></h1>
             </div>
+       
             {error && <p>Error: {error}</p>}
-            {memesList}
-          </main>
+            <div className = "meme-list-container">
+            {memesList} </div>
+          
         </div>
       );
 }
