@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MemeCard from '../components/MemeCard';
 import { useParams } from 'react-router-dom';
 import NavBar from './NavBar';
-import {Link} from "react-router-dom";
+
 
 function MemeDetail() {
 
@@ -28,7 +28,7 @@ function MemeDetail() {
 
     }, []);
 
-    
+
     return (
         <>
         <NavBar />

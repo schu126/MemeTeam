@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import MemeCard from '../components/MemeCard';
 import NavBar from '../components/NavBar';
+import { Link } from 'react-router-dom';
 
 
 
 function MemeLibrary() {
     const [memes, setMemes] = useState([]);
     const [error, setError] = useState(null);
-    const [searchedMeme, setSearchedMeme] = useState('');
 
     useEffect(() => {
         fetch('http://localhost:3000/memes')
@@ -24,8 +24,9 @@ function MemeLibrary() {
             .catch(error => {
                 setError(error.message);
             });
-    }, [setMemes]);
 
+    }, [setMemes]);
+  
     const handleLikeClick = (id) => {
         const updatedMemes = memes.map(meme => {
             if (meme.id === id) {
@@ -34,9 +35,10 @@ function MemeLibrary() {
             return meme;
         });
         setMemes(updatedMemes); 
+        // Update the state to see button change
         // Add fetch request here to update the like status on the server
     };
-
+   
     const handleSearch = (event) => {
         setSearchedMeme(event.target.value);
     };
@@ -45,15 +47,20 @@ function MemeLibrary() {
         meme.tags.some(tag => tag.toLowerCase().includes(searchedMeme.toLowerCase()))
     );
 
+
     const memesList = filteredMemesList.map(meme => (
         meme.image && (
             <MemeCard key={meme.id} meme={meme} className="MemeCardsContainer" handleLikeClick={handleLikeClick} /> // Pass handleLikeClick function
+
         )
     ));
 
     return (
-        <div>     <NavBar />
-          <div className="page-header">
+        <div>     
+        
+          <NavBar />
+        
+        <div className="page-header">
                 <h1><input
                 className="Search"
                 type="text"
@@ -69,6 +76,7 @@ function MemeLibrary() {
           
         </div>
       );
+
 }
 
 export default MemeLibrary;

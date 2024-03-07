@@ -52,11 +52,13 @@ function LikedMemes() {
     return (
         <div>
             <NavBar />
+
             <div className="page-header">
                 <h1>DEES MEMES I'M DREAMIN'</h1>
             </div>
             <div className="liked-meme-list-container">
                 
+
                 {likedMemes.map(meme => (
                     <div key={meme.id}>
                         <MemeCard meme={meme} handleLikeClick={handleLikeClick} />

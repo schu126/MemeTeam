@@ -75,6 +75,7 @@ function MemeCard({ meme, handleLikeClick }) {
             )}
         </div>
     );
+
 }
 
 export default MemeCard;
