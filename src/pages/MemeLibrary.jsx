@@ -9,7 +9,7 @@ function MemeLibrary() {
     const [searchedMeme, setSearchedMeme] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:3000/memes')
+        fetch('https://memeteam-server.onrender.com/memes')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch memes');

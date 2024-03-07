@@ -29,7 +29,7 @@ function NewMemeForm() {
           tags: tags.split(',').map(tag => tag.trim()), // Split tags by comma and trim whitespace
       };
       // POST the meme data to the server
-      fetch('http://localhost:3000/memes', {
+      fetch('https://memeteam-server.onrender.com/memes', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

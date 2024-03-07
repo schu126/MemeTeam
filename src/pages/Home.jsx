@@ -7,7 +7,7 @@ function Home() {
   const [randomMeme, setRandomMeme] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/memes')
+    fetch('https://memeteam-server.onrender.com/memes')
       .then(response => response.json())
       .then(data => {
         setMemes(data);

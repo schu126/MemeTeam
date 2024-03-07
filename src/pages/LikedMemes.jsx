@@ -11,7 +11,7 @@ function LikedMemes() {
     }, []);
 
     const fetchLikedMemes = () => {
-        fetch('http://localhost:3000/memes')
+        fetch('https://memeteam-server.onrender.com/memes')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch memes');
@@ -29,7 +29,7 @@ function LikedMemes() {
     };
 
     const handleLikeClick = (id) => {
-        fetch(`http://localhost:3000/memes/${id}`, {
+        fetch(`https://memeteam-server.onrender.com/memes/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

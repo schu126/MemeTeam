@@ -11,7 +11,7 @@ function MemeDetail() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/memes/${id}`)
+        fetch(`https://memeteam-server.onrender.com/memes/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch meme');

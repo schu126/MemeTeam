@@ -8,7 +8,7 @@ function MemeCard({ meme, handleLikeClick }) {
     const handleLike = () => {
         handleLikeClick(meme.id);
 
-        fetch(`http://localhost:3000/memes/${meme.id}`, {
+        fetch(`https://memeteam-server.onrender.com/memes/${meme.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function MemeCard({ meme, handleLikeClick }) {
 
     // Handle Patch for the Edit feature
     const handleSubmitTags = () => {
-        fetch(`http://localhost:3000/memes/${meme.id}`, {
+        fetch(`https://memeteam-server.onrender.com/memes/${meme.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
