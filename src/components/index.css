@@ -26,7 +26,7 @@
   font-size: 1.75em;
   text-transform: uppercase;
   font-weight: 500;
-  margin: 0 15px; /* Adjust spacing here */
+  margin: 25px; /* Adjust spacing here */
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   position: relative; /* Add this for dot positioning */
@@ -81,7 +81,7 @@
   backdrop-filter: blur(10px);  
 	align-items: center;
 	padding: 0 10px;
-	margin: 50px 0 0 0;
+	margin: 50px  0 0;
   }
   
   
@@ -210,13 +210,13 @@
 /* Styling for the page header */
 .page-header {
     text-align: center; /* Center align the content */
-    margin-top: 60px; /* Adjust margin from the top */
+    margin-top: 180px; /* Adjust margin from the top */
   }
   
   .page-header h1 {
     font-size: 24px; /* Adjust font size */
     margin-bottom: 40px; /* Adjust margin bottom */
-    margin-top: 140px;
+    margin-top: 180px;
     font-size: 1.75em;
     color: #fff;
   }
@@ -381,4 +381,36 @@
     height: 420px; /* Increase height of images by about 20% */
     width: auto;
     max-width: 100%; /* Ensure the image does not exceed the width of its container */
+  }
+
+  /* ----- CLIENT RENDERED MEME CARD ------  */
+
+  .memeDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  /* Style the MemeCard within the MemeDetail page */
+  .memeDetail .MemeCard {
+    max-width: 100%; /* Limit the maximum width of the MemeCard */
+    max-height: 100%; /* Limit the maximum height of the MemeCard */
+  }
+  
+  /* Adjust styles for the image inside the MemeCard */
+  .memeDetail .MemeCard img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
+  }
+  
+  /* Add any additional styles for buttons, tags, etc. */
+  .memeDetail .button-container {
+    margin-top: 20px; /* Add spacing below the image */
+  }
+  
+  .memeDetail .edit-container {
+    margin-top: 20px; /* Add spacing below the button container */
   }

@@ -5,6 +5,7 @@ import NewMemeForm from "./pages/NewMemeForm";
 import MemeLibrary from "./pages/MemeLibrary";
 import ErrorPage from "./pages/ErrorPage";
 import MemeDetail from "./components/MemeDetail";
+
 // import NavBar from "./components/NavBar";
 
 const routes = [
@@ -28,6 +29,7 @@ const routes = [
     element: <MemeLibrary />,
     errorElement: <ErrorPage />
   },
+  /// Testing Params
   {
     path: "/memes/:id",
     element: <MemeDetail />,
