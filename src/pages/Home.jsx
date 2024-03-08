@@ -39,8 +39,10 @@ function Home() {
   }
 
   return (
+    <div className='NavMenu'>
+    <NavBar />
     <div className="home-container">
-      <NavBar />
+      
       <h2>Meme of the Day</h2>
       <button className="random-meme-button" onClick={generateRandomMeme}>Meme Me</button>
       {randomMeme && (
@@ -49,6 +51,7 @@ function Home() {
         </div>
       )}
      
+    </div>
     </div>
   );
 }

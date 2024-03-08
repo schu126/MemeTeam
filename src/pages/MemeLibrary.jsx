@@ -52,12 +52,13 @@ function MemeLibrary() {
     ));
 
     return (
-        <div>     <NavBar />
+        <div className='NavMenu'>
+            <NavBar />
           <div className="page-header">
                 <h1><input
                 className="Search"
                 type="text"
-                placeholder=" What meme you dreamin?"
+                placeholder=" WHAT MEME YOU DREAMIN?"
                 onChange={handleSearch}
                 value={searchedMeme}
               /></h1>
@@ -68,6 +69,7 @@ function MemeLibrary() {
             {memesList} </div>
           
         </div>
+        
       );
 }
 

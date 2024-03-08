@@ -50,6 +50,7 @@ function MemeCard({ meme, handleLikeClick }) {
         });
     };
     return (
+        
         <div className='MemeCard'>
             <h1></h1>
             <img src={meme.image} alt={meme.title || 'Meme'} />
