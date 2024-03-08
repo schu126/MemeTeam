@@ -50,11 +50,12 @@ function LikedMemes() {
     };
 
     return (
-        <div>
+        <div className='NavMenu'>
             <NavBar />
 
-            <div className="page-header">
-                <h1>DEES MEMES I'M DREAMIN'</h1>
+            <div className='page-header'>
+               <h1></h1> <h2>DEES MEMES I'M DREAMIN'</h2>
+
             </div>
             <div className="liked-meme-list-container">
                 

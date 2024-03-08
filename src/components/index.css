@@ -6,54 +6,55 @@
 
 /* ------- NAVBAR--------- */
 
-.nav {
-    color: #ccc;
-    background-color: #333;
-    padding: 5px;
-    text-align: center; 
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    right: 0;
-    z-index: 1000;
-     /* Ensure the navbar stays on top of other content */
-  }
-  
-  .nav-link {
-    color: #fff;
-  
-    margin-right: 20px;
-    padding: 20px;
-  }
-  
-  .nav .links a.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  
-  .nav .links a:hover {
-    color: #ccc;
-  }
-  
-  
-  /* Links container */
-  .links {
-    font-size: 1.75em;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Navigation links */
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 1.75em;
-  }
-  
-  /* Active link styles */
-  .nav-link.active {
-    font-weight: bold;
-  }
+.navMenu {
+  position: fixed; /* Add this to make the navbar fixed */
+  top: 0; /* Position it at the top of the page */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  justify-content: center; /* Center align flex items horizontally */
+  background-color: #242424; /* Solid color background */
+  padding: 10px 0; /* Add padding to create space for the background */
+  width: 100%; /* Make sure the navbar spans the full width */
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 25px; /* Adjust spacing here */
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative; /* Add this for dot positioning */
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 5px); /* Position the dot below the link */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover .dot {
+  opacity: 1;
+}
+
+/* Removed the .nav styles since they are not needed */
   
   .MemeCardsContainer {
     display: flex; /* Use flexbox layout */
@@ -94,7 +95,7 @@
   .MemeCard {
     /* border: 1px solid #ccc;  */
     padding: 10px; /* Padding around the card */
-    width: 300px; /* Set width of the card */
+    width: 400px; /* Set width of the card */
     max-width: 100%; /* Ensure the card does not exceed its container */
     border-radius: 5px; /* Rounded corners for the card */
     margin-bottom: 20px; /* Add margin at the bottom of each card */
@@ -109,8 +110,8 @@
 }
 
 .MemeCard:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.927); 
-    transform: scale(1.3);/* Add box-shadow effect */
+    box-shadow: 0 0 10px #fddb3a; 
+    transform: scale(1.05);/* Add box-shadow effect */
   }
   
 .MemeCard img {
@@ -133,16 +134,16 @@
 
 .button-container button {
     padding: 8px 15px; /* Adjust padding for buttons */
-    font-size: 14px; /* Set font size for buttons */
+    font-size: 20px; /* Set font size for buttons */
     background-color: #62626355; /* Button background color */
-    color: #fff; /* Button text color */
+    color: #282828; /* Button text color */
     border: none; /* Remove button border */
     border-radius: 5px; /* Rounded corners for the button */
     cursor: pointer; /* Set cursor to pointer */
 }
 
 .button-container button:hover {
-    background-color: #0056b3; /* Button background color on hover */
+    background-color: #fddb3a; /* Button background color on hover */
 }
 
 .edit-container {
@@ -170,13 +171,13 @@
 /* Styling for the page header */
 .page-header {
     text-align: center; /* Center align the content */
-    margin-top: 60px; /* Adjust margin from the top */
+    margin-top: 180px; /* Adjust margin from the top */
   }
   
   .page-header h1 {
     font-size: 24px; /* Adjust font size */
     margin-bottom: 40px; /* Adjust margin bottom */
-    margin-top: 140px;
+    margin-top: 180px;
     font-size: 1.75em;
     color: #fff;
   }
@@ -189,7 +190,8 @@
     border-radius: 5px; /* Border radius */
     box-sizing: border-box; /* Include padding in width */
     outline: none; /* Remove focus outline */
-    font-size: 1.25em; /* Increase text size */
+    font-size: 1.25em;
+    text-align: center;
   }
   
   .Search::placeholder {
@@ -205,7 +207,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* 75% of the viewport height */
+    height: 50vh; /* 75% of the viewport height */
   }
   
   h2 {
@@ -289,8 +291,8 @@
   .random-meme-button {
     padding: 20px 80px; /* Adjust padding for the button */
     font-size: 1.5rem;
-    background-color: #3b433b;
-    color: white;
+    background-color: #fddb3a;
+    color: rgb(73, 71, 71);
     border: none;
     cursor: pointer;
     border-radius: 10px;
@@ -299,11 +301,77 @@
   }
   
   .random-meme-button:hover {
-    background-color: #2e322e; /* Darken background color on hover */
+    box-shadow: 0 0 30px #fddb3a; 
+    transform: scale(1.35); /* Darken background color on hover */
+  }
+  .random-meme-button:active {
+    animation: crazyAnimation 0.5s infinite;
   }
   
+  .random-meme-button:active {
+    animation: overTheTopAnimation 0.5s infinite;
+  }
+  
+  @keyframes overTheTopAnimation {
+    0% {
+      transform: scale(1) rotate(0) translateX(0);
+      background-color: #fddb3a;
+    }
+    20% {
+      transform: scale(1.1) rotate(-10deg) translateX(-5px);
+      background-color: #ff6347;
+    }
+    40% {
+      transform: scale(0.9) rotate(10deg) translateX(5px);
+      background-color: #00bfff;
+    }
+    60% {
+      transform: scale(1.1) rotate(-5deg) translateX(-5px);
+      background-color: #7cfc00;
+    }
+    80% {
+      transform: scale(0.9) rotate(5deg) translateX(5px);
+      background-color: #ff69b4;
+    }
+    100% {
+      transform: scale(1) rotate(0) translateX(0);
+      background-color: #fddb3a;
+    }
+  }
   .home-meme {
     height: 420px; /* Increase height of images by about 20% */
     width: auto;
     max-width: 100%; /* Ensure the image does not exceed the width of its container */
+  }
+
+  /* ----- CLIENT RENDERED MEME CARD ------  */
+
+  .memeDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  /* Style the MemeCard within the MemeDetail page */
+  .memeDetail .MemeCard {
+    max-width: 100%; /* Limit the maximum width of the MemeCard */
+    max-height: 100%; /* Limit the maximum height of the MemeCard */
+  }
+  
+  /* Adjust styles for the image inside the MemeCard */
+  .memeDetail .MemeCard img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
+  }
+  
+  /* Add any additional styles for buttons, tags, etc. */
+  .memeDetail .button-container {
+    margin-top: 20px; /* Add spacing below the image */
+  }
+  
+  .memeDetail .edit-container {
+    margin-top: 20px; /* Add spacing below the button container */
   }

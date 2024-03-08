@@ -26,7 +26,7 @@ function MemeDetail() {
                 setError(error.message);
             });
 
-    }, []);
+    }, [id]);
 
 
     return (

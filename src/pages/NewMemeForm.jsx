@@ -55,12 +55,15 @@ function NewMemeForm() {
       });
   };
   return (
-  
-      <div className="upload-form">
-          <NavBar />
-          <div className='page-header'>
-          <h2 >Upload Meme</h2>
+    <div className='NavMenu'>
+            <NavBar />
+
+            <div className='page-header'>
+                <h1></h1>
+          <h2 >GIMME DAT MEME</h2>
           </div>
+      <div className="upload-form">
+          
           <form onSubmit={handleSubmit}>
               <div>
                   <label htmlFor="image">Image Upload:</label>
@@ -80,12 +83,13 @@ function NewMemeForm() {
               </div>
               <div>
                   <label htmlFor="tags">Tags:</label>
-                  <input type="text" id="tags" value={tags} onChange={handleTagsChange} />
-                  <p>Enter tags separated by commas</p>
+                  <input type="text" placeholder="Separate Tags by comma" id="tags" value={tags} onChange={handleTagsChange} />
+                 
               </div>
               <button type="submit">Upload</button>
           </form>
           {error && <p>Error: {error}</p>}
+      </div>
       </div>
   );
 }

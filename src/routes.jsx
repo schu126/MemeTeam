@@ -27,6 +27,7 @@ const routes = [
     element: <MemeLibrary />,
     errorElement: <ErrorPage />
   },
+  /// Testing Params
   {
     path: "/memes/:id",
     element: <MemeDetail />,

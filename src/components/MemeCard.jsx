@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 function MemeCard({ meme, handleLikeClick }) {
     const [newTags, setNewTags] = useState('');
@@ -49,10 +50,13 @@ function MemeCard({ meme, handleLikeClick }) {
             console.error('Error updating tags:', error);
         });
     };
+
     return (
         <div className='MemeCard'>
             <h1></h1>
-            <img src={meme.image} alt={meme.title || 'Meme'} />
+            <Link to={`/memes/${meme.id}`}> {/* Wrap the image with Link */}
+                <img src={meme.image} alt={meme.title || 'Meme'} />
+            </Link>
             <div className="button-container">
                 <button onClick={handleToggleEditingTags}>
                     {editingTags ? '❌ Close Tags' : '📝 Add Tags'}
@@ -61,7 +65,6 @@ function MemeCard({ meme, handleLikeClick }) {
                     {meme.liked ? '❤️ Liked' : '🤍 Like'}
                 </button>
             </div>
-            {/* && is a conditional rendering in jsx */}
             {editingTags && (
                 <div className="edit-container">
                     <input 
